@@ -1,0 +1,15 @@
+<div id="map"></div>
+
+<div class="sidebar">
+  <form [formGroup]="formGroup">
+    <div class="form-group">
+      <label>Comuna</label>
+      <input type="text" class="form-control" formControlName="comuna">
+    </div>
+    <div class="form-group">
+      <label>Nombre del local</label>
+      <input type="text" class="form-control" formControlName="local">
+    </div>
+    <button type="submit" class="btn btn-primary btn-block" (click)="search()">Buscar</button>
+  </form>
+</div>

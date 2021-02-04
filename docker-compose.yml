@@ -1,0 +1,20 @@
+version: "3"
+ 
+services:
+  api:
+    build:
+      context: ./consorcioApi
+      dockerfile: Dockerfile
+    ports:
+      - 3000:3000
+    volumes:
+      - ./consorcioApi:/app
+
+  app:
+    build:
+      context: ./consorcioApp
+      dockerfile: Dockerfile
+    ports:
+      - 4200:4200
+    volumes:
+      - ./consorcioApp:/app
